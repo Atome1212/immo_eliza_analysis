@@ -12,6 +12,7 @@ print('\n')
 
 print(df.info())
 
+
 print('\n')
 
 print('Missing values:')
