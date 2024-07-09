@@ -1,7 +1,7 @@
 import pandas as pd
 from scipy import stats
 
-file = '/home/becode/becode/immo_eliza_analysis/data/formatted_json.json'
+file = '/Users/alexjones/Desktop/becode/immo_eliza_analysis/data/formatted_json.json'
 
 df = pd.read_json(file)
 
@@ -16,7 +16,7 @@ print('\n')
 
 print('Missing values:')
 print(df.isnull().sum())
-print(df['GardenArea'].mean())
+
 
 print('\n')
 
@@ -35,44 +35,40 @@ print(df.dtypes)
 
 print('\n')
 
-
+print('OUTLIERS IN THE DATASET (Above or below 3 standard deviation):')
 z_scores = stats.zscore(df.select_dtypes(include=[int,float]))
 outliers = (abs(z_scores)>3).sum()
 print(outliers)
 
 
 print('\n')
-print(df.isnull().sum())
-print(df['GardenArea'].mean())
-
-print('\n')
-
-print(df['GardenArea'].value_counts())
-
-print('\n')
-
-
-df = df.drop([df.index[15775], df.index[15776]])
-df.fillna({'GardenArea': 0}, inplace=True)
-df.fillna({'ConstructionYear': 0}, inplace=True)
-df.fillna({'Kitchen': 0}, inplace=True)
-df.fillna({'StateOfBuilding': 0}, inplace=True)
-df.fillna({'Heating': 0}, inplace=True)
-df.fillna({'SurfaceOfGood': 0}, inplace=True)
-df.fillna({'LivingArea': 0}, inplace=True)
-df.fillna({'NumberOfFacades': 0}, inplace=True)
-
-
-print('\n')
+print('Number of missing values in the dataset:')
 print(df.isnull().sum())
 
+print('\n')
 
-b = []
-for x in df['GardenArea']:
-    if x > 0:
-        b.append(x)
-
-print(sum(b)/len(b))
-print(df['GardenArea'].mean())
-
+#
+# df = df.drop([df.index[15775], df.index[15776]])
+# df.fillna({'GardenArea': 0}, inplace=True)
+# df.fillna({'ConstructionYear': 0}, inplace=True)
+# df.fillna({'Kitchen': 0}, inplace=True)
+# df.fillna({'StateOfBuilding': 0}, inplace=True)
+# df.fillna({'Heating': 0}, inplace=True)
+# df.fillna({'SurfaceOfGood': 0}, inplace=True)
+# df.fillna({'LivingArea': 0}, inplace=True)
+# df.fillna({'NumberOfFacades': 0}, inplace=True)
+#
+#
+# print('\n')
+# print(df.isnull().sum())
+#
+#
+# b = []
+# for x in df['GardenArea']:
+#     if x > 0:
+#         b.append(x)
+#
+# print(sum(b)/len(b))
+# print(df['GardenArea'].mean())
+#
 
