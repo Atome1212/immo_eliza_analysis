@@ -103,6 +103,16 @@ Afterwards, we need to communicate our analysis clearly with simple words and vi
 
 - `generate_grouped_plots(df)`: Generates multiple grouped plots to visualize different property characteristics.
 
+- `categorize_number_bedrooms(bedrooms)`: Categorizes the number of bedrooms into defined ranges.
+
+- `categorize_number_bathrooms(bathrooms)`: Categorizes the number of bathrooms into defined ranges.
+
+- `categorize_livingArea(livingArea)`: Categorizes the living area into defined ranges.
+
+- `categorize_gardenArea(gardenArea)`: Categorizes the garden area into defined ranges.
+
+
+
 ## 👥 Contributors
 
 - 👨‍🦰 Ben Ozfirat
