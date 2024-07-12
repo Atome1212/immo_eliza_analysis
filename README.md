@@ -119,7 +119,7 @@ Afterwards, we need to communicate our analysis clearly with simple words and vi
 
 - 👨‍🦰 Colin Gregoire
 
-- 👨‍️ Alisher Jardemaliyev
+- 👨‍🦰 Alisher Jardemaliyev
 
 ## 📅 Timeline
 
