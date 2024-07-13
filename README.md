@@ -4,31 +4,35 @@
 ## 📜 Description
 
 
-- This project involves being able to use pandas, as well as other data visulization libraries (matplotlib and seaborn).
+- This project involves the cleaning and analysis of the dataset created during the last challenge.
 
-- We need to clean a dataset for analysis, also establish conclusions about a dataset.
+- Using pandas and matplotlib, the objectives were to find and understand correlations between dataset's variables.
 
 - This project involves thinking outside the box and to be able to find and answer creative questions about data.
+
+<p align="center">
+  <img src="./Images/Image 1.jpg" style="max-width: 35%; height: auto;">
+</p>
 
 ## 📦 Installation
  
 - To run this project, you need to have Python installed on your machine.
   You also need the following Python libraries:
 
-- `geopandas`
+- 🌍 `geopandas`
 
-- `matplotlib`
+- 🧮 `matplotlib`
 
-- `pandas`
+- 🐼 `pandas`
 
-- `seaborn`
+- 🌊 `seaborn`
 
-- `datetime`
+- 🕥 `datetime`
 
 
 ## 🛠️ Usage
-
-### 1. 📥 Data Cleaning
+  
+### 1. 🧹 Data Cleaning
 
 Making sure dataset is free of:
 
@@ -37,7 +41,15 @@ Making sure dataset is free of:
 	•	Errors
 	•	Empty values
 
+
+<p align="center">
+  <img src="./Images/Image 2.jpg" style="max-width: 35%; height: auto;">
+</p>
+
+
 ### 2. 📊 Data Analysis
+
+
 
 Analyze the cleaned dataset using tools such as matplotlib, seaborn, or plotly. Address the following questions with correct visualizations:
 
@@ -83,43 +95,49 @@ Afterwards, we need to communicate our analysis clearly with simple words and vi
 
 ## 🧑‍💻🎯 Project Components: Functions and Descriptions
 
--  `no_duplicates(df)`: Removes duplicate rows from the DataFrame, except for the columns ‘Url’, ‘PropertyId’, and ‘SubtypeOfProperty’.
+-  `drop_duplicates()`: Compare the rows from the DataFrame. If two rows have the same date in the columns:'BedroomCount','District','Price','Garden','GardenArea','RoomCount',
+'SurfaceOfPlot','TypeOfSale' except for the columns ‘Url’, ‘PropertyId’, and ‘SubtypeOfProperty’, keep the first occurence and delete the other(s).
 
-- `strip_data(df)`: Strips leading and trailing whitespace from all string entries in the DataFrame.
+- `replace_0_1_with_bool()`: If a column contains only 0 and 1 value, replace them to boolean value.
 
-- `no_null(df)`: Handles missing values by filling them with appropriate default values based on data type.
+- `no_null()`: Handles missing values by filling them with appropriate default values based on data type.
 
 - `data_error(df)`:  Filters out erroneous data based on predefined criteria and corrects some values.
 
-- `get_province(postal_code)`: Returns the corresponding province if the postal code falls within the range.
+- `format_column_name()`: Take the column's name and replace the '_' in spaces
 
-- `median(df, type, color='blue')`: Plots the median prices by province for a specific type of sale.
+- `plot_generic()`: Create a plot showing the median prices from the Dataframe based on a specific column. It can also filter out 'Unknown' values and customize the chart's look.
 
-- `categorize_data(value, bins, labels)`: Categorizes a value based on predefined bins and labels(uses 'cut' method from pandas)
+- `categorize_construction_year`: Groups construction years into 5 categories and  adds them to the Dataframe. Then, makes two bar charts showing median prices by construction year and building state.
 
-- `replace_0_1_with_bool(df, columns)`: Converts 0 and 1 values to boolean values in specified columns.
-
-- `plot_generic(ax, df, column, title, xlabel, ylabel, color, categories=None, remove_unknown=True)`: Creates a generic bar plot for a specified columns.
-
-- `generate_grouped_plots(df)`: Generates multiple grouped plots to visualize different property characteristics.
+- `categorize_livingArea(livingArea)`: Categorizes the living area into defined ranges.
+  
+- `categorize_gardenArea(gardenArea)`: Categorizes the garden area into defined ranges.
 
 - `categorize_number_bedrooms(bedrooms)`: Categorizes the number of bedrooms into defined ranges.
 
 - `categorize_number_bathrooms(bathrooms)`: Categorizes the number of bathrooms into defined ranges.
-
-- `categorize_livingArea(livingArea)`: Categorizes the living area into defined ranges.
-
-- `categorize_gardenArea(gardenArea)`: Categorizes the garden area into defined ranges.
-
+    
 
 
 ## 👥 Contributors
 
-- 👨‍🦰 Ben Ozfirat
 
-- 👨‍🦰 Colin Gregoire
+<table style="width: 100%;" >
+<tbody>
+<tr>
+<td style="border: 1px solid #ffffff00" width="90%">
+Colin Gregoire <img src="https://raw.githubusercontent.com/Joffreybvn/challenge-collecting-data/master/docs/arrow.svg" width="12"> https://github.com/Atome1212<br>
+Ben Ozfirat <img src="https://raw.githubusercontent.com/Joffreybvn/challenge-collecting-data/master/docs/arrow.svg" width="12"> https://github.com/benozfirat<br>
+Alisher Jardemaliyev <img src="https://raw.githubusercontent.com/Joffreybvn/challenge-collecting-data/master/docs/arrow.svg" width="12"> https://github.com/AlisherJard
+</td>
+<td>
+<img src="https://github.com/kaiyungtan/challenge-data-analysis/blob/master/Visualisation/Immoweb%20house%20logo.png?raw=true">
+</td>
+</tr>
+</tbody>
+</table>
 
-- 👨‍🦰 Alisher Jardemaliyev
 
 ## 📅 Timeline
 
