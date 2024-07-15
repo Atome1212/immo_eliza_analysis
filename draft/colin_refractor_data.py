@@ -274,10 +274,6 @@ if __name__ == "__main__":
     plt.tight_layout()
     plt.show()
     
-    
-
-
-    # Supposons que df_no_error est votre DataFrame sans erreur et que vous souhaitez filtrer par vente seulement
 
     df_no_error['LivingAreaCategory'] = df_no_error['LivingArea'].apply(categorize_living_area)
     df_no_error['ConstructionYearCategory'] = df_no_error['ConstructionYear'].apply(categorize_construction_year)
